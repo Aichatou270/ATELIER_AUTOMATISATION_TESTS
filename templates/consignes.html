@@ -194,7 +194,7 @@
         </div>
         <div class="box">
           <b>Contraintes</b>
-          <span>Tests non destructifs, charge limitée, clés API (si besoin) via variables d’environnement.</span>
+          <span>Tests non destructifs, charge limitée, clés API (si besoin) via Secret Github.</span>
         </div>
       </div>
 
@@ -269,7 +269,7 @@ project/
 
       <div class="hr"></div>
 
-      <h2>5) Barème (sur 20)</h2>
+      <h2>5) Barème (sur 20 points)</h2>
       <table class="table">
         <thead>
           <tr>
@@ -315,7 +315,7 @@ project/
 
     <!-- RIGHT COLUMN -->
     <aside class="card">
-      <h2>Short-list d’APIs (recommandées)</h2>
+      <h2>Short-list d’APIs (exemples) : <a href="https://github.com/public-apis/public-apis" target="_blank" rel="noopener">public-apis</a></h2>
       <p class="muted small">
         Choisissez une API différente de vos camarades. Préférez “no auth” pour éviter les difficultés.
       </p>
@@ -363,9 +363,9 @@ project/
 
       <div class="hr"></div>
 
-      <h2>Fiche de choix d’API (à remplir)</h2>
+      <h2>Fiche de choix d’API (à remplir dans Github)</h2>
       <p class="muted small">
-        Copiez ce contenu dans <code>API_CHOICE.md</code> du dépôt.
+        Complétez le contenu du fichier <code>API_CHOICE.md</code> dans votre dépôt Github.
       </p>
       <pre>
 # API Choice
@@ -393,16 +393,17 @@ project/
         <li>✅ Enregistrement des runs (SQLite)</li>
         <li>✅ Dashboard accessible (<code>/dashboard</code>)</li>
         <li>✅ Exécution planifiée (PythonAnywhere Scheduled Task)</li>
+        <li>✅ [Bonus] <code>/health</code> pour visualiser l'état de santé de votre solution</li>
       </ul>
 
       <div class="hr"></div>
 
       <h2>Rappels “bonnes pratiques”</h2>
       <ul>
-        <li>Ne pas hardcoder une clé API (utiliser variable d’environnement - Secret).</li>
+        <li>Ne pas hardcoder une clé API (utiliser les Secrets Github).</li>
         <li>Limiter la charge (ne pas spammer l’API).</li>
         <li>Gérer proprement les codes <code>429</code>, <code>5xx</code>, timeouts.</li>
-        <li>Tracer les résultats (timestamp, latence, statut, message).</li>
+        <li>Tracer les résultats (timestamp, latence, statut, message) dans une base de données.</li>
       </ul>
 
       <div class="hr"></div>
@@ -440,8 +441,8 @@ project/
 <div class="footer">
   <div class="hr"></div>
   <div>
-    <b>Rappel :</b> préférez les API “no auth” pour simplifier votre solution. Dans le cas contraire pensez à mettre vos clés dans des variables d’environnement.
-    Prévoyez un mécanisme anti-spam (limite de runs) et un timeout strict (3–5s).
+    <p><b>Rappel :</b> préférez les API “no auth” pour simplifier votre solution. Dans le cas contraire pensez à mettre vos clés dans des variables d’environnement.
+    Prévoyez un mécanisme anti-spam (limite de runs) et un timeout strict (3–5s).</p>
   </div>
 </div>
 </body>
